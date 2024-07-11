@@ -13,6 +13,7 @@
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@react-three/fiber": "^8.16.8",
+    "@types/three": "^0.166.0",
     "framer-motion": "^6",
     "next": "12.3.0",
     "next-auth": "^4.19.2",
