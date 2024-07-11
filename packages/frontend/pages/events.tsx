@@ -1,8 +1,8 @@
+import React, { useState } from "react";
 import type { NextPage } from "next";
 import { Divider, Heading, Stack } from "@chakra-ui/react";
 import PageLayout from "../components/Layout/PageLayout";
 import Calendar from "../components/Calendar/Calendar";
-import React, { useState } from "react";
 import Log from "../components/Log/Log";
 
 const Events: NextPage = () => {

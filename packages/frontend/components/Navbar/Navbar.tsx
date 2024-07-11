@@ -1,4 +1,3 @@
-import PageLayout from "../Layout/PageLayout";
 import {
   Box,
   Heading,
@@ -9,6 +8,7 @@ import {
   MenuItem,
   MenuList,
 } from "@chakra-ui/react";
+import PageLayout from "../Layout/PageLayout";
 
 const Navbar = (): JSX.Element => {
   return (
@@ -30,49 +30,53 @@ const Navbar = (): JSX.Element => {
             spacing={10}
             justifyContent={"space-evenly"}
           >
-            <Box fontSize={"xl"} fontWeight={500} as="a" href="/about">
+            <Box fontSize={"xl"} fontWeight={500} as={"a"} href={"/about"}>
               About
             </Box>
-            <Box fontSize={"xl"} fontWeight={500} as="a" href="/events">
+            <Box fontSize={"xl"} fontWeight={500} as={"a"} href={"/events"}>
               Events
             </Box>
-            <Box fontSize={"xl"} fontWeight={500} as="a" href="/menu">
+            <Box fontSize={"xl"} fontWeight={500} as={"a"} href={"/menu"}>
               Menu
             </Box>
-            <Box fontSize={"xl"} fontWeight={500} as="a" href="/about">
-              About
-            </Box>
-            <Box fontSize={"xl"} fontWeight={500} as="a" href="/about">
-              About
-            </Box>
           </HStack>
-          <Box paddingTop="0px" paddingRight="40px" display={["block", "none"]}>
+          <Box
+            paddingTop={"0px"}
+            paddingRight={"40px"}
+            display={["block", "none"]}
+          >
             <Menu>
               <MenuButton
-                fontSize="27px"
-                fontWeight="400"
+                fontSize={"27px"}
+                fontWeight={"400"}
                 _hover={{ color: "brand.500" }}
                 cursor={"pointer"}
               >
                 &#9776;
               </MenuButton>
-              <MenuList zIndex="101">
+              <MenuList zIndex={"101"}>
                 <MenuItem>
-                  <Box minW="100%" as="a" href="/">
+                  <Box minW={"100%"} as={"a"} href={"/"}>
                     Home
                   </Box>
                 </MenuItem>
                 <MenuDivider />
                 <MenuItem>
-                  <Box minW="100%" as="a" href="/about">
+                  <Box minW={"100%"} as={"a"} href={"/about"}>
                     About
                   </Box>
                 </MenuItem>
                 <MenuDivider />
 
                 <MenuItem>
-                  <Box minW="100%" as="a" href="/events">
+                  <Box minW={"100%"} as={"a"} href={"/events"}>
                     Events
+                  </Box>
+                </MenuItem>
+                <MenuDivider />
+                <MenuItem>
+                  <Box minW={"100%"} as={"a"} href={"/menu"}>
+                    Menu
                   </Box>
                 </MenuItem>
               </MenuList>

@@ -1,18 +1,6 @@
 import React from "react";
 import { Box, Button, Divider, Heading, HStack } from "@chakra-ui/react";
 
-const Weekday = ({ day }: { day: string }): JSX.Element => {
-  return (
-    <Box>
-      {" "}
-      <Box textAlign={"center"} p={2}>
-        {day}
-      </Box>
-      <Divider />
-    </Box>
-  );
-};
-
 const Log = ({ selectedDay }: { selectedDay: number | null }): JSX.Element => {
   const hasEvent = selectedDay === 15;
   return (

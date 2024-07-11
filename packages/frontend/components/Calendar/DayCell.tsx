@@ -62,7 +62,9 @@ const DayCell = ({
               height={"25px"}
               opacity={1}
               borderRadius={10}
-            ></Box>
+            >
+              !
+            </Box>
           </Box>
         )}
       </VStack>
