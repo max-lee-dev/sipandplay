@@ -41,6 +41,14 @@
     "prettier": "^2.5.1"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/react": "^2.8.2",
+    "@chakra-ui/system": "^2.6.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@fontsource-variable/rubik": "^5.0.22",
+    "@fontsource/arvo": "^5.0.19",
+    "framer-motion": "^11.3.2",
     "react-icons": "^5.2.1"
   }
 }

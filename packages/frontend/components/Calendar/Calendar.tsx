@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Divider, Heading, SimpleGrid } from "@chakra-ui/react";
 import DayCell from "./DayCell";
 
@@ -14,9 +14,13 @@ const Weekday = ({ day }: { day: string }): JSX.Element => {
   );
 };
 
-const Calendar = (): JSX.Element => {
-  const [selectedDay, setSelectedDay] = useState<number | null>(null);
-
+const Calendar = ({
+  selectedDay,
+  setSelectedDay,
+}: {
+  selectedDay: number | null;
+  setSelectedDay: (idx: number) => void;
+}): JSX.Element => {
   return (
     <Box
       alignItems={["center", "flex-start"]}
@@ -24,7 +28,7 @@ const Calendar = (): JSX.Element => {
       borderRadius={5}
       width={"fit-content"}
     >
-      <Heading p={2} alignSelf={"flex-start"} fontSize={["2xl", "3xl"]}>
+      <Heading p={2} alignSelf={"flex-start"} fontSize={["xl", "2xl"]}>
         July 2024
       </Heading>
       <SimpleGrid
