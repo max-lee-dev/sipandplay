@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import type { NextPage } from "next";
-import { Box, Divider, Heading, Stack } from "@chakra-ui/react";
+import { Box, Stack } from "@chakra-ui/react";
 import PageLayout from "../components/Layout/PageLayout";
 import Calendar from "../components/Calendar/Calendar";
 import Log from "../components/Log/Log";
@@ -35,14 +35,6 @@ const Events: NextPage = () => {
         <link rel={"icon"} href={"/favicon.ico"} />
       </Head>
       <Box px={4}>
-        <Box pl={2} bg={"neutral.100"} p={5}>
-          <Heading pt={5} fontSize={["xl", "3xl"]}>
-            Events
-          </Heading>
-
-          <Divider borderWidth={2} borderColor={"brand.500"} width={"5%"} />
-        </Box>
-
         <Stack
           pt={6}
           direction={["column", "row"]}

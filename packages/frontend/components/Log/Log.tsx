@@ -2,7 +2,8 @@ import React from "react";
 import { Box, Button, Divider, Heading, HStack } from "@chakra-ui/react";
 
 const Log = ({ selectedDay }: { selectedDay: number | null }): JSX.Element => {
-  const hasEvent = selectedDay === 15; // Injected event on the 15th for demonstration purposes
+  const hasEvent =
+    selectedDay === 15 || selectedDay === 25 || selectedDay === 28; // Injected events for demonstration purposes
   return (
     <Box
       alignItems={["center", "flex-start"]}

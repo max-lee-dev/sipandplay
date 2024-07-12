@@ -8,9 +8,17 @@ import {
   MenuItem,
   MenuList,
 } from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
 import PageLayout from "../Layout/PageLayout";
 
 const Navbar = (): JSX.Element => {
+  const [route, setRoute] = useState<string>("" as string);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setRoute(window.location.pathname);
+    }
+  }, []);
+
   return (
     <Box width={"100%"} mb={2} as={"nav"} bg={"neutral.100"}>
       <PageLayout>
@@ -30,6 +38,7 @@ const Navbar = (): JSX.Element => {
             justifyContent={"space-evenly"}
           >
             <Box
+              textDecoration={currentRoute === "/" ? "underline" : "none"}
               fontSize={"md"}
               fontWeight={500}
               as={"a"}
@@ -38,8 +47,19 @@ const Navbar = (): JSX.Element => {
               <Heading fontSize={"md"}>About</Heading>
             </Box>
 
-            <Box fontSize={"md"} fontWeight={500} as={"a"} href={"/events"}>
-              <Heading fontSize={"md"}>Events</Heading>
+            <Box
+              textDecorationStyle={"solid"}
+              textDecoration={route === "/events" ? "underline" : "none"}
+              textDecorationColor={"brand.500"}
+              textDecorationThickness={"2px"}
+              fontSize={"md"}
+              fontWeight={500}
+              as={"a"}
+              href={"/events"}
+            >
+              <Heading textDecorationColor={"brand.500"} fontSize={"md"}>
+                Events
+              </Heading>
             </Box>
             <Box
               fontSize={"md"}
@@ -51,8 +71,19 @@ const Navbar = (): JSX.Element => {
             >
               <Heading fontSize={"md"}>Our Games</Heading>
             </Box>
-            <Box fontSize={"md"} fontWeight={500} as={"a"} href={"/menu"}>
-              <Heading fontSize={"md"}>Menu</Heading>
+            <Box
+              textDecorationThickness={"2px"}
+              textDecorationStyle={"solid"}
+              textDecorationColor={"brand.500"}
+              textDecoration={route === "/menu" ? "underline" : "none"}
+              fontSize={"md"}
+              fontWeight={500}
+              as={"a"}
+              href={"/menu"}
+            >
+              <Heading textDecorationColor={"brand.500"} fontSize={"md"}>
+                Menu
+              </Heading>
             </Box>
             <Box
               fontSize={"md"}

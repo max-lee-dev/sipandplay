@@ -13,7 +13,7 @@ const DayCell = ({
   day: number;
   setDay: (idx: number) => void;
 }): JSX.Element => {
-  const hasEvent = idx === 15;
+  const hasEvent = idx === 15 || idx === 25 || idx === 28; // Injected events for demonstration purposes
   const beforeToday = idx < 11;
   return (
     <Box onClick={() => setDay(idx)}>

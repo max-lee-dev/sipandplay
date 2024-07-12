@@ -1,4 +1,6 @@
 import type { NextPage } from "next";
+import Head from "next/head";
+
 import {
   Box,
   Center,
@@ -16,7 +18,6 @@ import PageLayout from "../components/Layout/PageLayout";
 import ActualCoffeeModel from "../components/ActualCoffeeModel";
 import BobaModel from "../components/BobaModel";
 import CoffeeModel from "../components/CoffeeModel";
-import Head from "next/head";
 
 const CoffeeMenu = (): JSX.Element => {
   return (
