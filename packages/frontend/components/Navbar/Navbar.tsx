@@ -38,7 +38,6 @@ const Navbar = (): JSX.Element => {
             justifyContent={"space-evenly"}
           >
             <Box
-              textDecoration={currentRoute === "/" ? "underline" : "none"}
               fontSize={"md"}
               fontWeight={500}
               as={"a"}
