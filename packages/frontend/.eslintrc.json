@@ -118,6 +118,7 @@
     "react/jsx-no-bind": "off",
     "react/jsx-props-no-spreading": "off",
     "react/no-danger": "error",
+    "react/jsx-no-useless-fragment": "off",
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "react/require-default-props": "off",

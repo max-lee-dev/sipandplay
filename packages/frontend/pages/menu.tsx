@@ -17,7 +17,9 @@ const CoffeeMenu = (): JSX.Element => {
   return (
     <Box>
       <NoSsr />
-      <CoffeeModel />
+      <Box>
+        <CoffeeModel />
+      </Box>
       <Box
         bg={"brand.200"}
         height={"fit-content"}
