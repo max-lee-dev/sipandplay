@@ -25,6 +25,7 @@ const Events: NextPage = () => {
         <Calendar selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
         <Log selectedDay={selectedDay} />
       </Stack>
+      <Log selectedDay={selectedDay} />
     </PageLayout>
   );
 };

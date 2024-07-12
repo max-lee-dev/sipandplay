@@ -7,7 +7,7 @@ import "../styles.css";
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <ChakraProvider theme={theme}>
-      <Box bg={"neutral.200"} minH={["130vh", "130vh"]}>
+      <Box bg={"neutral.200"} width={"100%"} minH={["130vh", "130vh"]}>
         <Navbar />
         <Component {...pageProps} />
       </Box>

@@ -9,16 +9,14 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import PageLayout from "../components/Layout/PageLayout";
 import Head from "next/head";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import NoSsr from "../components/no-ssr";
+import PageLayout from "../components/Layout/PageLayout";
+import ActualCoffeeModel from "../components/ActualCoffeeModel";
+import CoffeeModel from "../components/CoffeeModel";
 
-const CoffeeMenu = ({
-  setCanFlip,
-}: {
-  setCanFlip: (b: boolean) => void;
-}): JSX.Element => {
+const CoffeeMenu = (): JSX.Element => {
   return (
     <Box
       className={"back"}
@@ -29,7 +27,7 @@ const CoffeeMenu = ({
       color={"brand.900"}
     >
       <Box>
-        {/*<ActualCoffeeModel />*/}
+        <ActualCoffeeModel />
 
         <HStack>
           <Heading fontWeight={700} fontSize={"2xl"}>
@@ -104,19 +102,18 @@ const CoffeeMenu = ({
           </HStack>
         </VStack>
       </Box>
-      {/*<Box*/}
-      {/*  id={"realCoffee"}*/}
-      {/*  alignSelf={"flex-start"}*/}
-      {/*  alignContent={"flex-start"}*/}
-      {/*  alignItems={"flex-start"}*/}
-      {/*  pl={"80px"}*/}
-      {/*  color={"transparent"}*/}
-      {/*  width={["100%", "0px"]}*/}
-      {/*  height={["0%", "0px"]}*/}
-      {/*  minWidth={"200px"}*/}
-      {/*>*/}
-      {/*  .*/}
-      {/*</Box>*/}
+      <Box
+        id={"realCoffee"}
+        alignSelf={"flex-start"}
+        alignContent={"flex-start"}
+        alignItems={"flex-start"}
+        pl={"80px"}
+        color={"transparent"}
+        width={["100%", "0px"]}
+        minWidth={"200px"}
+      >
+        .
+      </Box>
     </Box>
   );
 };
@@ -126,12 +123,12 @@ const SpecialtyMenu = (): JSX.Element => {
     <Box
       className={"back"}
       bg={"neutral.100"}
-      height={["100%", "100%"]}
+      height={["50%", "100%"]}
       borderRadius={"lg"}
       p={8}
       color={"brand.900"}
     >
-      {/*<CoffeeModel />*/}
+      <CoffeeModel />
 
       <Box>
         <HStack>
@@ -207,19 +204,18 @@ const SpecialtyMenu = (): JSX.Element => {
           </HStack>
         </VStack>
       </Box>
-      {/*<Box*/}
-      {/*  id={"coffee"}*/}
-      {/*  alignSelf={"flex-start"}*/}
-      {/*  alignContent={"flex-start"}*/}
-      {/*  alignItems={"flex-start"}*/}
-      {/*  pl={"80px"}*/}
-      {/*  color={"transparent"}*/}
-      {/*  width={["100%", "0px"]}*/}
-      {/*  */}
-      {/*  minWidth={"200px"}*/}
-      {/*>*/}
-      {/*  .*/}
-      {/*</Box>*/}
+      <Box
+        id={"coffee"}
+        alignSelf={"flex-start"}
+        alignContent={"flex-start"}
+        alignItems={"flex-start"}
+        pl={"80px"}
+        color={"transparent"}
+        width={["100%", "0px"]}
+        minWidth={"200px"}
+      >
+        .
+      </Box>
     </Box>
   );
 };
@@ -325,30 +321,18 @@ const BobaMenu = (): JSX.Element => {
 
 const Menu: NextPage = () => {
   const document = typeof window !== "undefined" ? window.document : null;
-  const [canFlip, setCanFlip] = useState<boolean>(true);
-  var elements = document?.querySelectorAll(":hover");
-
-  useEffect(() => {
-    console.log(canFlip);
-    if (elements) console.log();
-  }, [canFlip]);
 
   const flipBook = (elBook: any) => {
     elBook.style.setProperty("--c", 1); // Set current page
 
     elBook.querySelectorAll(".page").forEach((page: any, idx: number) => {
       page.style.setProperty("--i", idx);
-      let onCoffee = false;
-      if (elements && elements[elements.length - 1]?.id === "coffee") {
-        onCoffee = true;
-      }
       page.addEventListener("mouseup", (evt: any) => {
-        if (evt.target.closest("a") || onCoffee) return;
+        if (evt.target.closest("a")) return;
         const curr = evt.target.closest(".back") ? idx : idx + 1;
         elBook.style.setProperty("--c", curr);
 
-        if (idx === 0 && evt.target.closest(".back") && !onCoffee) {
-          console.log("on?: " + onCoffee);
+        if (idx === 0 && evt.target.closest(".back")) {
           elBook.classList.remove("flipped"); // Add the flipped class
         } else if (idx === 0) {
           elBook.classList.add("flipped");
@@ -360,16 +344,22 @@ const Menu: NextPage = () => {
   document?.querySelectorAll(".book").forEach(flipBook);
 
   return (
-    <PageLayout title={"geese, by minihacks"}>
+    <PageLayout>
       <NoSsr />
 
       <Head>
-        <title key={"title"}>hi</title>
-        <meta name={"description"} content={"hi"} />
-        <meta property={"og:title"} content={"hi"} />
-        <meta property={"og:description"} content={"hi"} />
-        <meta property={"og:image"} content={"/"} />
-        <meta property={"og:url"} content={"hi"} />
+        <style>{`
+          body {
+            margin: 0;
+            display: flex;
+            min-height: 100dvh;
+            perspective: 1000px;
+            font: 1em/1.4 "Poppins", sans-serif;
+            overflow: hidden;
+            color: hsl(180 68% 5%);
+            background-image: radial-gradient(circle farthest-corner at 50% 50%, hsl(187 20% 88%) 30%, hsl(149 20% 94%) 100%);
+          }
+        `}</style>
       </Head>
       <HStack spacing={0}>
         <Box>
@@ -385,7 +375,7 @@ const Menu: NextPage = () => {
             <Box className={"front cover"}>
               <Heading as={"h1"}>Menu</Heading>
             </Box>
-            <CoffeeMenu setCanFlip={setCanFlip} />
+            <CoffeeMenu />
           </Box>
           <Box className={"page"}>
             <Box className={"front"}>
@@ -394,7 +384,7 @@ const Menu: NextPage = () => {
                 alt={"coffee"}
                 pt={2}
                 borderRadius={20}
-                width={"200px"}
+                height={"100%"}
               />
             </Box>
 

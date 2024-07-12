@@ -12,7 +12,7 @@ import PageLayout from "../Layout/PageLayout";
 
 const Navbar = (): JSX.Element => {
   return (
-    <Box mb={2} as={"nav"} bg={"neutral.100"}>
+    <Box width={"100%"} mb={2} as={"nav"} bg={"neutral.100"}>
       <PageLayout>
         <HStack
           p={2}
