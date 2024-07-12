@@ -9,6 +9,7 @@ import {
   MenuList,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
+import { FaDiscord, FaFacebook, FaInstagram } from "react-icons/fa6";
 import PageLayout from "../Layout/PageLayout";
 
 const Navbar = (): JSX.Element => {
@@ -91,6 +92,17 @@ const Navbar = (): JSX.Element => {
               href={"https://www.sipnplaynyc.com/reservations"}
             >
               <Heading fontSize={"md"}>Reservations</Heading>
+            </Box>
+          </HStack>
+          <HStack pr={10} spacing={4} display={["none", "flex"]}>
+            <Box as={"a"} href={"https://www.instagram.com/sipnplaynyc/"}>
+              <FaInstagram size={30} />
+            </Box>
+            <Box as={"a"} href={"https://www.facebook.com/sipnplaynyc"}>
+              <FaFacebook size={30} />
+            </Box>
+            <Box as={"a"} href={"https://discord.gg/bdURvWC "}>
+              <FaDiscord size={30} />
             </Box>
           </HStack>
           <Box

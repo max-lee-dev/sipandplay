@@ -12,7 +12,12 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { Slide } from "react-slideshow-image";
-import { FaClock, FaDiceD20, FaLocationArrow } from "react-icons/fa";
+import {
+  FaClock,
+  FaDiceD20,
+  FaLocationArrow,
+  FaQuestion,
+} from "react-icons/fa";
 import PageLayout from "../components/Layout/PageLayout";
 import "react-slideshow-image/dist/styles.css";
 
@@ -163,6 +168,7 @@ const Home: NextPage = () => {
               <Heading fontSize={["xl", "2xl"]}>Location & Hours</Heading>
               <Stack
                 pt={[0, 4]}
+                spacing={[0, 10]}
                 direction={["column", "row"]}
                 alignItems={"flex-start"}
               >
@@ -176,6 +182,11 @@ const Home: NextPage = () => {
                   <Text>Friday: 11am - midnight</Text>
                   <Text>Saturday: 10pm - midnight</Text>
                   <Text>Sunday: 10am - 11pm</Text>
+                </VStack>
+                <VStack alignItems={"flex-start"}>
+                  <FaQuestion />
+                  <Text> sipnplaynyc@gmail.com</Text>
+                  <Text>718-971-1684</Text>
                 </VStack>
               </Stack>
             </Box>
