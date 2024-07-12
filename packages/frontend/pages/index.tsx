@@ -1,4 +1,6 @@
 import type { NextPage } from "next";
+import Head from "next/head";
+
 import {
   Box,
   Button,
@@ -13,11 +15,10 @@ import { Slide } from "react-slideshow-image";
 import { FaClock, FaDiceD20, FaLocationArrow } from "react-icons/fa";
 import PageLayout from "../components/Layout/PageLayout";
 import "react-slideshow-image/dist/styles.css";
-import Head from "next/head";
 
 const Home: NextPage = () => {
   const divStyle = {
-    height: "250px",
+    height: "350px",
     backgroundSize: "cover",
     backgroundPosition: "center",
     borderRadius: "15px",
@@ -75,14 +76,12 @@ const Home: NextPage = () => {
             <VStack
               px={[0, 16]}
               justifyContent={"flex-start"}
-              alignContent={"flex-start"}
               alignItems={"flex-start"}
               width={"100%"}
             >
               <Box
                 pt={4}
                 cursor={"pointer"}
-                alignItems={"flex-start"}
                 alignSelf={"flex-start"}
                 width={"100%"}
                 fontWeight={500}

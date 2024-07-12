@@ -26,6 +26,7 @@ const Calendar = ({
       alignItems={["center", "flex-start"]}
       bg={"neutral.100"}
       borderRadius={5}
+      p={[1, 8]}
       width={"fit-content"}
     >
       <Heading p={2} alignSelf={"flex-start"} fontSize={["xl", "2xl"]}>

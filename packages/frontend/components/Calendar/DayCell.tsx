@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Divider, Text, VStack } from "@chakra-ui/react";
+import { MdEventNote } from "react-icons/md";
 
 const DayCell = ({
   selectedDay,
@@ -18,7 +19,7 @@ const DayCell = ({
     <Box onClick={() => setDay(idx)}>
       <VStack
         cursor={"pointer"}
-        bg={beforeToday ? "neutral.300" : "transparent "}
+        bg={beforeToday ? "neutral.200" : "transparent "}
         borderRight={(day + 1) % 7 === 0 ? 0 : "2px"}
         spacing={[0, 1]}
         borderColor={"neutral.200"}
@@ -37,11 +38,20 @@ const DayCell = ({
         </Box>
         {hasEvent && ( // Demo example, injected events
           <Box>
+            <Box display={["none", "block"]} opacity={1} borderRadius={10}>
+              <Text
+                textAlign={"center"}
+                fontWeight={900}
+                fontSize={"5xl"}
+                color={"brand.500"}
+              >
+                <MdEventNote />
+              </Text>
+            </Box>
             <Box
-              display={["none", "block"]}
+              mt={-1}
+              display={["block", "none"]}
               bg={"neutral.200"}
-              width={"50px"}
-              height={"40px"}
               opacity={1}
               borderRadius={10}
             >
@@ -51,19 +61,8 @@ const DayCell = ({
                 fontSize={"2xl"}
                 color={"brand.500"}
               >
-                !
+                <MdEventNote />
               </Text>
-            </Box>
-            <Box
-              mt={-1}
-              display={["block", "none"]}
-              bg={"neutral.200"}
-              width={"30px"}
-              height={"25px"}
-              opacity={1}
-              borderRadius={10}
-            >
-              !
             </Box>
           </Box>
         )}

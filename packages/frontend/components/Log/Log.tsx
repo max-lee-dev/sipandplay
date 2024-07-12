@@ -9,6 +9,7 @@ const Log = ({ selectedDay }: { selectedDay: number | null }): JSX.Element => {
       bg={"neutral.100"}
       height={["200px", "600px"]}
       borderRadius={5}
+      p={[4, 8]}
       width={["350px", "700px"]}
     >
       <Heading p={2} alignSelf={"flex-start"} fontSize={["2xl", "2xl"]}>
