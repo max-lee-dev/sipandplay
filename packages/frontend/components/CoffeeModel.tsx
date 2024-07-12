@@ -6,7 +6,6 @@ import { loadGLTFModel } from "./model";
 
 const CoffeeModel = (): JSX.Element => {
   const refContainer = useRef<HTMLDivElement>(null);
-  const [loading, setLoading] = useState<boolean>(true);
   const [renderer, setRenderer] = useState<any>(null);
   const [target] = useState(new THREE.Vector3(10, 10, 10));
   const [initialCameraPosition] = useState(
@@ -20,7 +19,7 @@ const CoffeeModel = (): JSX.Element => {
     const container = document.getElementById("coffee");
     if (container && !renderer) {
       const scW = container.clientWidth;
-      const scH = container.clientHeight;
+      const scH = container.clientHeight + 50;
       const renderer = new THREE.WebGLRenderer({
         antialias: true,
         alpha: true,
@@ -31,37 +30,33 @@ const CoffeeModel = (): JSX.Element => {
       container.appendChild(renderer.domElement);
       setRenderer(renderer);
 
-      const scale = scH * 0.00101 + 1;
+      const scale = scH * 0.000000000001 + 0.85;
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
         scale,
         -scale,
-        0.0001,
+        1,
         25
       );
       camera.position.copy(initialCameraPosition);
       camera.lookAt(target);
 
-      const ambientLight = new THREE.AmbientLight(0xffffff, 10);
+      const ambientLight = new THREE.AmbientLight(0xffffff, 1);
       scene.add(ambientLight);
       const controls = new OrbitControls(camera, renderer.domElement);
       controls.domElement = container;
 
       loadGLTFModel({
         scene,
-        glbPath: "/welcome_sign_restaurant.glb",
+        glbPath: "/cafe_latte_with_art.glb",
         options: {
           receiveShadow: true,
           castShadow: true,
         },
-      })
-        .then(() => {
-          setLoading(false);
-        })
-        .catch((error) => {
-          console.error("Error loading model:", error);
-        });
+      }).catch((error) => {
+        console.error("Error loading model:", error);
+      });
 
       let req: number;
       const animate = () => {
@@ -77,11 +72,11 @@ const CoffeeModel = (): JSX.Element => {
       };
 
       const disableControls = () => {
-        console.log("disable controls");
         controls.enabled = false;
       };
 
       container.addEventListener("mouseenter", enableControls);
+
       container.addEventListener("mouseleave", disableControls);
 
       return () => {

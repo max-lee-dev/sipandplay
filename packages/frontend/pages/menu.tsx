@@ -11,10 +11,14 @@ import {
 } from "@chakra-ui/react";
 import PageLayout from "../components/Layout/PageLayout";
 import Head from "next/head";
-import React from "react";
-import CoffeeModel from "../components/CoffeeModel";
+import React, { useEffect, useState } from "react";
+import NoSsr from "../components/no-ssr";
 
-const CoffeeMenu = (): JSX.Element => {
+const CoffeeMenu = ({
+  setCanFlip,
+}: {
+  setCanFlip: (b: boolean) => void;
+}): JSX.Element => {
   return (
     <Box
       className={"back"}
@@ -25,6 +29,8 @@ const CoffeeMenu = (): JSX.Element => {
       color={"brand.900"}
     >
       <Box>
+        {/*<ActualCoffeeModel />*/}
+
         <HStack>
           <Heading fontWeight={700} fontSize={"2xl"}>
             Coffee
@@ -98,9 +104,19 @@ const CoffeeMenu = (): JSX.Element => {
           </HStack>
         </VStack>
       </Box>
-      <Box position={"absolute"}>
-        <CoffeeModel />
-      </Box>
+      {/*<Box*/}
+      {/*  id={"realCoffee"}*/}
+      {/*  alignSelf={"flex-start"}*/}
+      {/*  alignContent={"flex-start"}*/}
+      {/*  alignItems={"flex-start"}*/}
+      {/*  pl={"80px"}*/}
+      {/*  color={"transparent"}*/}
+      {/*  width={["100%", "0px"]}*/}
+      {/*  height={["0%", "0px"]}*/}
+      {/*  minWidth={"200px"}*/}
+      {/*>*/}
+      {/*  .*/}
+      {/*</Box>*/}
     </Box>
   );
 };
@@ -115,6 +131,8 @@ const SpecialtyMenu = (): JSX.Element => {
       p={8}
       color={"brand.900"}
     >
+      {/*<CoffeeModel />*/}
+
       <Box>
         <HStack>
           <Heading fontWeight={700} fontSize={"2xl"}>
@@ -189,6 +207,19 @@ const SpecialtyMenu = (): JSX.Element => {
           </HStack>
         </VStack>
       </Box>
+      {/*<Box*/}
+      {/*  id={"coffee"}*/}
+      {/*  alignSelf={"flex-start"}*/}
+      {/*  alignContent={"flex-start"}*/}
+      {/*  alignItems={"flex-start"}*/}
+      {/*  pl={"80px"}*/}
+      {/*  color={"transparent"}*/}
+      {/*  width={["100%", "0px"]}*/}
+      {/*  */}
+      {/*  minWidth={"200px"}*/}
+      {/*>*/}
+      {/*  .*/}
+      {/*</Box>*/}
     </Box>
   );
 };
@@ -294,17 +325,30 @@ const BobaMenu = (): JSX.Element => {
 
 const Menu: NextPage = () => {
   const document = typeof window !== "undefined" ? window.document : null;
+  const [canFlip, setCanFlip] = useState<boolean>(true);
+  var elements = document?.querySelectorAll(":hover");
+
+  useEffect(() => {
+    console.log(canFlip);
+    if (elements) console.log();
+  }, [canFlip]);
+
   const flipBook = (elBook: any) => {
     elBook.style.setProperty("--c", 1); // Set current page
 
     elBook.querySelectorAll(".page").forEach((page: any, idx: number) => {
       page.style.setProperty("--i", idx);
-      page.addEventListener("click", (evt: any) => {
-        if (evt.target.closest("a")) return;
+      let onCoffee = false;
+      if (elements && elements[elements.length - 1]?.id === "coffee") {
+        onCoffee = true;
+      }
+      page.addEventListener("mouseup", (evt: any) => {
+        if (evt.target.closest("a") || onCoffee) return;
         const curr = evt.target.closest(".back") ? idx : idx + 1;
         elBook.style.setProperty("--c", curr);
 
-        if (idx === 0 && evt.target.closest(".back")) {
+        if (idx === 0 && evt.target.closest(".back") && !onCoffee) {
+          console.log("on?: " + onCoffee);
           elBook.classList.remove("flipped"); // Add the flipped class
         } else if (idx === 0) {
           elBook.classList.add("flipped");
@@ -317,6 +361,8 @@ const Menu: NextPage = () => {
 
   return (
     <PageLayout title={"geese, by minihacks"}>
+      <NoSsr />
+
       <Head>
         <title key={"title"}>hi</title>
         <meta name={"description"} content={"hi"} />
@@ -332,21 +378,6 @@ const Menu: NextPage = () => {
           </Heading>
           <Divider borderWidth={3} borderColor={"brand.500"} width={"50px"} />
         </Box>
-        <Box
-          id={"coffee"}
-          alignSelf={"flex-start"}
-          alignContent={"flex-start"}
-          alignItems={"flex-start"}
-          width={["50%", "10%"]}
-          height={["8%", "10%"]}
-          top={["-100px", "-20px"]}
-          left={[3, 32]}
-          color={"transparent"}
-          minWidth={"20px"}
-          position={"absolute"}
-        >
-          .
-        </Box>
       </HStack>
       <Center>
         <Box className={"book"}>
@@ -354,7 +385,7 @@ const Menu: NextPage = () => {
             <Box className={"front cover"}>
               <Heading as={"h1"}>Menu</Heading>
             </Box>
-            <CoffeeMenu />
+            <CoffeeMenu setCanFlip={setCanFlip} />
           </Box>
           <Box className={"page"}>
             <Box className={"front"}>
