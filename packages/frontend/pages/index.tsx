@@ -9,7 +9,7 @@ const Home: NextPage = () => {
         <Box bg={"neutral.100"}>
           <Heading width={"100%"}>Welcome</Heading>
         </Box>
-        <Box>hi</Box>
+        <Box>hia</Box>
       </HStack>
     </PageLayout>
   );
