@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Box, Spinner } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { loadGLTFModel } from "./model";
@@ -8,20 +8,16 @@ const CoffeeModel = (): JSX.Element => {
   const refContainer = useRef<HTMLDivElement>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [renderer, setRenderer] = useState<any>(null);
-  const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0));
+  const [target] = useState(new THREE.Vector3(10, 10, 10));
   const [initialCameraPosition] = useState(
-    new THREE.Vector3(
-      20 * Math.sin(0.2 * Math.PI),
-      10,
-      20 * Math.cos(0.2 * Math.PI)
-    )
+    new THREE.Vector3(6, 5, 20 * Math.cos(0.2 * Math.PI))
   );
 
   const [scene] = useState(new THREE.Scene());
 
   /* eslint-disable */
   useEffect(() => {
-    const container = refContainer.current;
+    const container = document.getElementById("coffee");
     if (container && !renderer) {
       const scW = container.clientWidth;
       const scH = container.clientHeight;
@@ -35,27 +31,26 @@ const CoffeeModel = (): JSX.Element => {
       container.appendChild(renderer.domElement);
       setRenderer(renderer);
 
-      const scale = scH * 0.005 + 4.8;
+      const scale = scH * 0.00101 + 1;
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
         scale,
         -scale,
-        0.01,
-        5000
+        0.0001,
+        25
       );
       camera.position.copy(initialCameraPosition);
       camera.lookAt(target);
 
-      const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+      const ambientLight = new THREE.AmbientLight(0xffffff, 10);
       scene.add(ambientLight);
       const controls = new OrbitControls(camera, renderer.domElement);
-      controls.enableZoom = false;
       controls.domElement = container;
 
       loadGLTFModel({
         scene,
-        glbPath: "/cafe_latte_with_art.glb",
+        glbPath: "/welcome_sign_restaurant.glb",
         options: {
           receiveShadow: true,
           castShadow: true,
@@ -100,19 +95,7 @@ const CoffeeModel = (): JSX.Element => {
     }
   }, []);
 
-  return (
-    <Box
-      ref={refContainer}
-      className={"voxel-coffee"}
-      width={[800, 2000]}
-      height={2000}
-      top={[0, -2850]}
-      left={-750}
-      position={"absolute"}
-    >
-      {loading && <Spinner size={"xl"} />}
-    </Box>
-  );
+  return <Box ref={refContainer} className={"voxel-coffee"}></Box>;
 };
 
 export default CoffeeModel;

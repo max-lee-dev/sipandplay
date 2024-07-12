@@ -1,12 +1,13 @@
 import { extendTheme } from "@chakra-ui/react";
 import "@fontsource/arvo";
 import "@fontsource-variable/rubik";
+import "@fontsource/questrial";
 
 export default extendTheme({
   initialColorMode: "light",
 
   fonts: {
-    heading: "Arvo",
+    heading: "Questrial",
     body: "Rubik Variable",
   },
 

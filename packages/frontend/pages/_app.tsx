@@ -2,6 +2,7 @@ import type { AppProps } from "next/app";
 import { Box, ChakraProvider } from "@chakra-ui/react";
 import Navbar from "../components/Navbar/Navbar";
 import theme from "../theme";
+import "../styles.css";
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
