@@ -25,7 +25,7 @@ and (min-width: 1224px) {
         transition: all 1s;
         translate: calc(min(var(--c), 1) * 50%) 0%;
         /* Incline on the X axis for pages preview */
-        rotate: 1 0 0 var(--initial-rotation, 0deg);
+        rotate: 1 0 0 var(--initial-rotation, 50deg);
     }
 
 }
@@ -47,7 +47,7 @@ and (max-device-width: 480px) {
         transition: all 1s;
         translate: calc(min(var(--c), 1) * 50%) 0%;
         /* Incline on the X axis for pages preview */
-        rotate: 1 0 0 var(--initial-rotation, 60deg);
+        rotate: 1 0 0 var(--initial-rotation, 50deg);
     }
 }
 
@@ -133,11 +133,6 @@ and (max-device-width: 480px) {
     }
 }
 
-.cover {
-    &::after {
-        content: "";
-    }
-}
 
 .front {
     &::after {
@@ -155,9 +150,4 @@ and (max-device-width: 480px) {
 
     background-image: linear-gradient(to right, #f7f7f7 80%, #eee 100%);
     border-radius: .5em .1em .1em .5em;
-}
-
-.cover {
-    background: linear-gradient(to left, #f7f7f7 80%, #eee 100%);
-    border-radius: .1em .5em .5em .1em;
 }

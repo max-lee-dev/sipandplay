@@ -30,9 +30,15 @@ const Navbar = (): JSX.Element => {
             spacing={10}
             justifyContent={"space-evenly"}
           >
-            <Box fontSize={"xl"} fontWeight={500} as={"a"} href={"/about"}>
+            <Box
+              fontSize={"xl"}
+              fontWeight={500}
+              as={"a"}
+              href={"https://www.sipnplaynyc.com/about"}
+            >
               About
             </Box>
+
             <Box fontSize={"xl"} fontWeight={500} as={"a"} href={"/events"}>
               Events
             </Box>
@@ -62,7 +68,11 @@ const Navbar = (): JSX.Element => {
                 </MenuItem>
                 <MenuDivider />
                 <MenuItem>
-                  <Box minW={"100%"} as={"a"} href={"/about"}>
+                  <Box
+                    minW={"100%"}
+                    as={"a"}
+                    href={"https://www.sipnplaynyc.com/about"}
+                  >
                     About
                   </Box>
                 </MenuItem>

@@ -15,6 +15,7 @@ import NoSsr from "../components/no-ssr";
 import PageLayout from "../components/Layout/PageLayout";
 import ActualCoffeeModel from "../components/ActualCoffeeModel";
 import CoffeeModel from "../components/CoffeeModel";
+import BobaModel from "../components/BobaModel";
 
 const CoffeeMenu = (): JSX.Element => {
   return (
@@ -27,8 +28,6 @@ const CoffeeMenu = (): JSX.Element => {
       color={"brand.900"}
     >
       <Box>
-        <ActualCoffeeModel />
-
         <HStack>
           <Heading fontWeight={700} fontSize={"2xl"}>
             Coffee
@@ -114,6 +113,7 @@ const CoffeeMenu = (): JSX.Element => {
       >
         .
       </Box>
+      <ActualCoffeeModel />
     </Box>
   );
 };
@@ -123,13 +123,11 @@ const SpecialtyMenu = (): JSX.Element => {
     <Box
       className={"back"}
       bg={"neutral.100"}
-      height={["50%", "100%"]}
+      height={["100%", "100%"]}
       borderRadius={"lg"}
       p={8}
       color={"brand.900"}
     >
-      <CoffeeModel />
-
       <Box>
         <HStack>
           <Heading fontWeight={700} fontSize={"2xl"}>
@@ -216,20 +214,22 @@ const SpecialtyMenu = (): JSX.Element => {
       >
         .
       </Box>
+      <CoffeeModel />
     </Box>
   );
 };
 
 const BobaMenu = (): JSX.Element => {
   return (
-    <Box>
-      <Box
-        bg={"neutral.100"}
-        height={"fit-content"}
-        borderRadius={"lg"}
-        p={8}
-        color={"brand.900"}
-      >
+    <Box
+      className={"back"}
+      bg={"neutral.100"}
+      height={"100%"}
+      borderRadius={"lg"}
+      p={8}
+      color={"brand.900"}
+    >
+      <Box>
         <HStack>
           <Heading fontWeight={700} fontSize={"2xl"}>
             Boba
@@ -306,14 +306,359 @@ const BobaMenu = (): JSX.Element => {
           </VStack>
         </VStack>
       </Box>
+      <Box
+        id={"boba"}
+        alignSelf={"flex-start"}
+        alignContent={"flex-start"}
+        alignItems={"flex-start"}
+        pl={"80px"}
+        color={"transparent"}
+        width={["100%", "0px"]}
+        minWidth={"200px"}
+      >
+        .
+      </Box>
+      <BobaModel />
+    </Box>
+  );
+};
+
+const HotBitesMenu = (): JSX.Element => {
+  return (
+    <Box
+      className={"back"}
+      bg={"neutral.100"}
+      height={"100%"}
+      borderRadius={"lg"}
+      p={8}
+      color={"brand.900"}
+    >
       <Box>
-        <Image
-          src={"/boba.png"}
-          alt={"boba"}
-          pt={2}
-          borderRadius={20}
-          width={"100%"}
-        />
+        <HStack>
+          <Heading fontWeight={700} fontSize={"2xl"}>
+            Hot Bites
+          </Heading>
+        </HStack>
+        <Divider borderColor={"brand.700"} borderWidth={1} />
+        <VStack width={"100%"} alignItems={"flex-start"} pt={6}>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Chicken Tenders
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $8.00
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Chicken Poppers
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $6.00
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Onion Rings
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $5.00
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Fries
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $5.00
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Sweet Potato Fries
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $6.00
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Pigs in a Blanket
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $7.00
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Tater Tots
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $5.00
+            </Text>
+          </HStack>
+        </VStack>
+      </Box>
+    </Box>
+  );
+};
+
+const SnacksMenu = (): JSX.Element => {
+  return (
+    <Box
+      className={"back"}
+      bg={"neutral.100"}
+      height={"100%"}
+      borderRadius={"lg"}
+      p={8}
+      color={"brand.900"}
+    >
+      <Box>
+        <HStack>
+          <Heading fontWeight={700} fontSize={"2xl"}>
+            Sandwiches & Salads
+          </Heading>
+        </HStack>
+        <Divider borderColor={"brand.700"} borderWidth={1} />
+        <VStack width={"100%"} alignItems={"flex-start"} pt={6}>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Beyond Bussin Sandwich
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $15.00
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Spicy Chicken Sandwich
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $13.00
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Italian Panini
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $11.00
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              TunaMelt
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $11.00
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Zesto Chicken Sandwich
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $13.00
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Turkey Club
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $11.00
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Mixed Green Salad
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $6.50
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Cobb Salad
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $10.00
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Pizza Panini
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $11.00
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Smoked Salmon Tartine
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $11.00
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Avocado Toast
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $10.00
+            </Text>
+          </HStack>
+        </VStack>
+      </Box>
+    </Box>
+  );
+};
+
+const SeasonalMenu = (): JSX.Element => {
+  return (
+    <Box
+      className={"back"}
+      bg={"neutral.100"}
+      height={"100%"}
+      borderRadius={"lg"}
+      p={8}
+      color={"brand.900"}
+    >
+      <Box>
+        <HStack>
+          <Heading fontWeight={700} fontSize={"2xl"}>
+            Seasonal Menu
+          </Heading>
+        </HStack>
+        <Divider borderColor={"brand.700"} borderWidth={1} />
+        <VStack width={"100%"} alignItems={"flex-start"} pt={6}>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Pina Colada
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $4.75(H)/$5.75(C)
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Matcha Lemondae
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $5.75(H)/$6.25(C)
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Yuzu-Ade
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $5.25
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Fresh Squeezed Lemonade
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $4.00
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Matcha Lavender Oat
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $6.50
+            </Text>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Barry Lavendar Lemondae
+            </Heading>
+            <Text fontSize={"md"} fontWeight={400}>
+              $5.25
+            </Text>
+          </HStack>
+        </VStack>
+      </Box>
+    </Box>
+  );
+};
+
+const BeerMenu = (): JSX.Element => {
+  return (
+    <Box
+      className={"back"}
+      bg={"neutral.100"}
+      height={"100%"}
+      borderRadius={"lg"}
+      p={8}
+      color={"brand.900"}
+    >
+      <Box>
+        <HStack>
+          <Heading fontWeight={700} fontSize={"2xl"}>
+            Beer
+          </Heading>
+        </HStack>
+        <Divider borderColor={"brand.700"} borderWidth={1} />
+        <VStack width={"100%"} alignItems={"flex-start"} pt={6}>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Babe Rose
+            </Heading>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Archer Roose White/Red
+            </Heading>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Kona Lager
+            </Heading>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Blue Point
+            </Heading>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Juneshine
+            </Heading>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Lunar Hard Seltzers
+            </Heading>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Allagash White
+            </Heading>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Doc Cider
+            </Heading>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Doc Cider
+            </Heading>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Stella Artois
+            </Heading>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Shocktop
+            </Heading>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Finback
+            </Heading>
+          </HStack>
+          <HStack width={"100%"} justifyContent={"space-between"}>
+            <Heading fontSize={"md"} fontWeight={600}>
+              Three&apos;s Brewery
+            </Heading>
+          </HStack>
+        </VStack>
       </Box>
     </Box>
   );
@@ -323,7 +668,7 @@ const Menu: NextPage = () => {
   const document = typeof window !== "undefined" ? window.document : null;
 
   const flipBook = (elBook: any) => {
-    elBook.style.setProperty("--c", 1); // Set current page
+    elBook.style.setProperty("--c", 0); // Set current page
 
     elBook.querySelectorAll(".page").forEach((page: any, idx: number) => {
       page.style.setProperty("--i", idx);
@@ -361,20 +706,30 @@ const Menu: NextPage = () => {
           }
         `}</style>
       </Head>
-      <HStack spacing={0}>
-        <Box>
-          <Heading pt={5} fontSize={["xl", "3xl"]}>
-            Menu
-          </Heading>
-          <Divider borderWidth={3} borderColor={"brand.500"} width={"50px"} />
-        </Box>
-      </HStack>
+
       <Center>
         <Box className={"book"}>
           <Box className={"page"}>
-            <Box className={"front cover"}>
-              <Heading as={"h1"}>Menu</Heading>
+            <Box className={"front"}>
+              <VStack alignItems={"flex-start"} pl={6} spacing={0}>
+                <Heading pt={5} fontSize={["xl", "4xl"]}>
+                  Menu
+                </Heading>
+                <Divider
+                  borderWidth={3}
+                  borderColor={"brand.500"}
+                  width={"50px"}
+                />
+                <Center pl={36} pt={20}>
+                  <Image
+                    src={"/sipnplaycropped.png"}
+                    width={"20px"}
+                    alt={"logo"}
+                  />
+                </Center>
+              </VStack>
             </Box>
+
             <CoffeeMenu />
           </Box>
           <Box className={"page"}>
@@ -400,9 +755,55 @@ const Menu: NextPage = () => {
                 width={"100%"}
               />
             </Box>
-            <Box className={"back cover"}>
-              <Text>hi</Text>
+            <BobaMenu />
+          </Box>
+          <Box className={"page"}>
+            <Box className={"front"}>
+              <Image
+                src={"/boba.png"}
+                alt={"boba"}
+                pt={2}
+                borderRadius={20}
+                width={"100%"}
+              />
             </Box>
+            <HotBitesMenu />
+          </Box>
+          <Box className={"page"}>
+            <Box className={"front"}>
+              <Image
+                src={"/hotbites.png"}
+                alt={"hotbites"}
+                pt={2}
+                borderRadius={20}
+                width={"50%"}
+              />
+            </Box>
+            <SnacksMenu />
+          </Box>
+          <Box className={"page"}>
+            <Box className={"front"}>
+              <Image
+                src={"/snacks.png"}
+                alt={"snacks"}
+                pt={2}
+                borderRadius={20}
+                width={"50%"}
+              />
+            </Box>
+            <SeasonalMenu />
+          </Box>
+          <Box className={"page"}>
+            <Box className={"front"}>
+              <Image
+                src={"/Seasonal.png"}
+                alt={"seasonal"}
+                pt={2}
+                borderRadius={20}
+                width={"100%"}
+              />
+            </Box>
+            <BeerMenu />
           </Box>
         </Box>
       </Center>
