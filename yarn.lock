@@ -5994,6 +5994,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tweenjs/tween.js@npm:^18.6.4":
+  version: 18.6.4
+  resolution: "@tweenjs/tween.js@npm:18.6.4"
+  checksum: 47208db3f6c32cde80284a852d0fca016284f90c4798eb4ebb2ebfc2e379504007bf0c031c2c33044df8a0878fd1942ebc4e0b7f5b8bcccf812b532ea1ee73eb
+  languageName: node
+  linkType: hard
+
 "@tweenjs/tween.js@npm:~23.1.2":
   version: 23.1.2
   resolution: "@tweenjs/tween.js@npm:23.1.2"
@@ -10303,6 +10310,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     react-icons: ^5.2.1
+    react-slideshow-image: ^4.3.1
     three: ^0.166.1
     typescript: 4.8.3
   languageName: unknown
@@ -14628,6 +14636,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-slideshow-image@npm:^4.3.1":
+  version: 4.3.1
+  resolution: "react-slideshow-image@npm:4.3.1"
+  dependencies:
+    "@tweenjs/tween.js": ^18.6.4
+    resize-observer-polyfill: ^1.5.1
+  peerDependencies:
+    react: ">=15"
+  checksum: f436ac53e02d8fa52319d58221b322a85398aa3e79aef6dd621cfb2b23b9cfab0995e223ff513e53c77ce1c6ea0b47abca5b047ddd2444810c0beebbe80ce06d
+  languageName: node
+  linkType: hard
+
 "react-style-singleton@npm:^2.2.1":
   version: 2.2.1
   resolution: "react-style-singleton@npm:2.2.1"
@@ -14927,6 +14947,13 @@ __metadata:
   version: 4.1.7
   resolution: "reselect@npm:4.1.7"
   checksum: 738d8e2b8f0dca154ad29de6a209c9fbca2d70ae6788fd85df87f2c74b95a65bbf2d16d43a9e2faff39de34d17a29d706ba08a6b2ee5660c09589edbd19af7e1
+  languageName: node
+  linkType: hard
+
+"resize-observer-polyfill@npm:^1.5.1":
+  version: 1.5.1
+  resolution: "resize-observer-polyfill@npm:1.5.1"
+  checksum: 57e7f79489867b00ba43c9c051524a5c8f162a61d5547e99333549afc23e15c44fd43f2f318ea0261ea98c0eb3158cca261e6f48d66e1ed1cd1f340a43977094
   languageName: node
   linkType: hard
 
