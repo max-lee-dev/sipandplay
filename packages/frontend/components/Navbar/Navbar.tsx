@@ -17,7 +17,7 @@ const Navbar = (): JSX.Element => {
         <HStack
           p={2}
           spacing={[10, "200px"]}
-          justifyContent={["space-between", "space-between"]}
+          justifyContent={["space-between", "inherit"]}
         >
           <HStack spacing={4} as={"a"} href={"/"}>
             <img src={"/sipnplaycropped.png"} width={"60px"} alt={"logo"} />

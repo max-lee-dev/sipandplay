@@ -29,73 +29,73 @@ const CoffeeMenu = (): JSX.Element => {
     >
       <Box>
         <HStack>
-          <Heading fontWeight={700} fontSize={"2xl"}>
+          <Heading fontWeight={700} fontSize={["3xl", "2xl"]}>
             Coffee
           </Heading>
         </HStack>
         <Divider borderColor={"brand.700"} borderWidth={1} />
         <VStack width={"100%"} alignItems={"flex-start"} pt={6}>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Latte
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $4.75(H)/$5.25(C)
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Cappucino
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $4.50(H)
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Americano
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $3.75(H)/$4.25(C)
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Cortado
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $4.25(H)/$4.75(C)
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Red Eye
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $4.50(H)/$4.75(C)
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Cafe Au Lait
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $3.25(H)
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Mocha
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $5.75(H)/$6.25(C)
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Cortado
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $4.25(H)/$4.75(C)
             </Text>
           </HStack>
@@ -130,73 +130,73 @@ const SpecialtyMenu = (): JSX.Element => {
     >
       <Box>
         <HStack>
-          <Heading fontWeight={700} fontSize={"2xl"}>
+          <Heading fontWeight={700} fontSize={["3xl", "2xl"]}>
             Specialty
           </Heading>
         </HStack>
         <Divider borderColor={"brand.700"} borderWidth={1} />
         <VStack width={"100%"} alignItems={"flex-start"} pt={6}>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Matcha Latte
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $5.25(H)/$5.75(C)
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Rose Latte
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $5.75(H)/$6.25(C)
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Chai
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $5.00(H)/$5.50(C)
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Hot Chocolate
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $4.50(H)
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Lavendar Latte
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $5.75(H)/$6.25(C)
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Brown Sugar Latte
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $5.75(H)/$6.25(C)
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Chai
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $5.00(H)/$5.50(C)
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Dirty Chai
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $6.25(H)/$6.75(C)
             </Text>
           </HStack>
@@ -231,7 +231,7 @@ const BobaMenu = (): JSX.Element => {
     >
       <Box>
         <HStack>
-          <Heading fontWeight={700} fontSize={"2xl"}>
+          <Heading fontWeight={700} fontSize={["3xl", "2xl"]}>
             Boba
           </Heading>
         </HStack>
@@ -239,35 +239,35 @@ const BobaMenu = (): JSX.Element => {
         <VStack width={"100%"} alignItems={"flex-start"} spacing={5} pt={6}>
           <VStack spacing={3} alignItems={"flex-start"} width={"100%"}>
             <Box>
-              <Heading fontSize={"md"} fontWeight={600}>
+              <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
                 The OG
               </Heading>
-              <Heading pt={0} fontSize={"xs"} fontWeight={400}>
+              <Heading pt={0} fontSize={"md"} fontWeight={400}>
                 Classic milk tea
               </Heading>
             </Box>
             <VStack width={"100%"}>
               <HStack width={"100%"} justifyContent={"space-between"}>
-                <Text fontSize={"xs"} fontWeight={400}>
+                <Text fontSize={"md"} fontWeight={400}>
                   Medium
                 </Text>
-                <Text fontSize={"xs"} fontWeight={400}>
+                <Text fontSize={"md"} fontWeight={400}>
                   $4.75
                 </Text>
               </HStack>
               <HStack width={"100%"} justifyContent={"space-between"}>
-                <Text fontSize={"xs"} fontWeight={400}>
+                <Text fontSize={"md"} fontWeight={400}>
                   Large
                 </Text>
-                <Text fontSize={"xs"} fontWeight={400}>
+                <Text fontSize={"md"} fontWeight={400}>
                   $5.75
                 </Text>
               </HStack>
               <HStack width={"100%"} justifyContent={"space-between"}>
-                <Text fontSize={"xs"} fontWeight={400}>
+                <Text fontSize={"md"} fontWeight={400}>
                   Hot
                 </Text>
-                <Text fontSize={"xs"} fontWeight={400}>
+                <Text fontSize={"md"} fontWeight={400}>
                   $5.75
                 </Text>
               </HStack>
@@ -275,30 +275,30 @@ const BobaMenu = (): JSX.Element => {
           </VStack>
           <VStack spacing={3} alignItems={"flex-start"} width={"100%"}>
             <Box>
-              <Heading fontSize={"md"} fontWeight={600}>
+              <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
                 The Fruit Black Tea
               </Heading>
-              <Heading pt={0} fontSize={"xs"} fontWeight={400}>
+              <Heading pt={0} fontSize={"md"} fontWeight={400}>
                 Comes in a variety of flavors: peach/strawerry
               </Heading>
-              <Heading pt={0} fontSize={"xs"} fontWeight={400}>
+              <Heading pt={0} fontSize={"md"} fontWeight={400}>
                 Feel free to mix and match!
               </Heading>
             </Box>
             <VStack width={"100%"}>
               <HStack width={"100%"} justifyContent={"space-between"}>
-                <Text fontSize={"xs"} fontWeight={400}>
+                <Text fontSize={"md"} fontWeight={400}>
                   Medium
                 </Text>
-                <Text fontSize={"xs"} fontWeight={400}>
+                <Text fontSize={"md"} fontWeight={400}>
                   $4.25
                 </Text>
               </HStack>
               <HStack width={"100%"} justifyContent={"space-between"}>
-                <Text fontSize={"xs"} fontWeight={400}>
+                <Text fontSize={"md"} fontWeight={400}>
                   Large
                 </Text>
-                <Text fontSize={"xs"} fontWeight={400}>
+                <Text fontSize={"md"} fontWeight={400}>
                   $5.25
                 </Text>
               </HStack>
@@ -335,65 +335,65 @@ const HotBitesMenu = (): JSX.Element => {
     >
       <Box>
         <HStack>
-          <Heading fontWeight={700} fontSize={"2xl"}>
+          <Heading fontWeight={700} fontSize={["3xl", "2xl"]}>
             Hot Bites
           </Heading>
         </HStack>
         <Divider borderColor={"brand.700"} borderWidth={1} />
         <VStack width={"100%"} alignItems={"flex-start"} pt={6}>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Chicken Tenders
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $8.00
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Chicken Poppers
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $6.00
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Onion Rings
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $5.00
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Fries
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $5.00
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Sweet Potato Fries
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $6.00
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Pigs in a Blanket
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $7.00
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Tater Tots
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $5.00
             </Text>
           </HStack>
@@ -415,97 +415,97 @@ const SnacksMenu = (): JSX.Element => {
     >
       <Box>
         <HStack>
-          <Heading fontWeight={700} fontSize={"2xl"}>
+          <Heading fontWeight={700} fontSize={["3xl", "2xl"]}>
             Sandwiches & Salads
           </Heading>
         </HStack>
         <Divider borderColor={"brand.700"} borderWidth={1} />
         <VStack width={"100%"} alignItems={"flex-start"} pt={6}>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Beyond Bussin Sandwich
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $15.00
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Spicy Chicken Sandwich
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $13.00
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Italian Panini
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $11.00
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               TunaMelt
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $11.00
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Zesto Chicken Sandwich
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $13.00
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Turkey Club
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $11.00
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Mixed Green Salad
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $6.50
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Cobb Salad
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $10.00
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Pizza Panini
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $11.00
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Smoked Salmon Tartine
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $11.00
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Avocado Toast
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $10.00
             </Text>
           </HStack>
@@ -527,57 +527,57 @@ const SeasonalMenu = (): JSX.Element => {
     >
       <Box>
         <HStack>
-          <Heading fontWeight={700} fontSize={"2xl"}>
+          <Heading fontWeight={700} fontSize={["3xl", "2xl"]}>
             Seasonal Menu
           </Heading>
         </HStack>
         <Divider borderColor={"brand.700"} borderWidth={1} />
         <VStack width={"100%"} alignItems={"flex-start"} pt={6}>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Pina Colada
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $4.75(H)/$5.75(C)
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Matcha Lemondae
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $5.75(H)/$6.25(C)
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Yuzu-Ade
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $5.25
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Fresh Squeezed Lemonade
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $4.00
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Matcha Lavender Oat
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $6.50
             </Text>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Barry Lavendar Lemondae
             </Heading>
-            <Text fontSize={"md"} fontWeight={400}>
+            <Text fontSize={["3xl", "2xl"]} fontWeight={400}>
               $5.25
             </Text>
           </HStack>
@@ -599,62 +599,62 @@ const BeerMenu = (): JSX.Element => {
     >
       <Box>
         <HStack>
-          <Heading fontWeight={700} fontSize={"2xl"}>
+          <Heading fontWeight={700} fontSize={["3xl", "2xl"]}>
             Beer
           </Heading>
         </HStack>
         <Divider borderColor={"brand.700"} borderWidth={1} />
         <VStack width={"100%"} alignItems={"flex-start"} pt={6}>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Babe Rose
             </Heading>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Archer Roose White/Red
             </Heading>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Kona Lager
             </Heading>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Blue Point
             </Heading>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Juneshine
             </Heading>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Lunar Hard Seltzers
             </Heading>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Allagash White
             </Heading>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Doc Cider
             </Heading>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Doc Cider
             </Heading>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Stella Artois
             </Heading>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Shocktop
             </Heading>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Finback
             </Heading>
           </HStack>
           <HStack width={"100%"} justifyContent={"space-between"}>
-            <Heading fontSize={"md"} fontWeight={600}>
+            <Heading fontSize={["3xl", "2xl"]} fontWeight={600}>
               Three&apos;s Brewery
             </Heading>
           </HStack>
@@ -720,7 +720,7 @@ const Menu: NextPage = () => {
                   borderColor={"brand.500"}
                   width={"50px"}
                 />
-                <Center pl={36} pt={20}>
+                <Center pl={10} pt={20}>
                   <Image
                     src={"/sipnplaycropped.png"}
                     width={"20px"}
@@ -739,7 +739,8 @@ const Menu: NextPage = () => {
                 alt={"coffee"}
                 pt={2}
                 borderRadius={20}
-                height={"100%"}
+                boxSize={"100%"}
+                height={"50%"}
               />
             </Box>
 
@@ -781,30 +782,19 @@ const Menu: NextPage = () => {
             </Box>
             <SnacksMenu />
           </Box>
-          <Box className={"page"}>
-            <Box className={"front"}>
-              <Image
-                src={"/snacks.png"}
-                alt={"snacks"}
-                pt={2}
-                borderRadius={20}
-                width={"50%"}
-              />
-            </Box>
-            <SeasonalMenu />
-          </Box>
-          <Box className={"page"}>
-            <Box className={"front"}>
-              <Image
-                src={"/Seasonal.png"}
-                alt={"seasonal"}
-                pt={2}
-                borderRadius={20}
-                width={"100%"}
-              />
-            </Box>
-            <BeerMenu />
-          </Box>
+
+          {/*<Box className={"page"}>*/}
+          {/*  <Box className={"front"}>*/}
+          {/*    <Image*/}
+          {/*      src={"/Seasonal.png"}*/}
+          {/*      alt={"seasonal"}*/}
+          {/*      pt={2}*/}
+          {/*      borderRadius={20}*/}
+          {/*      width={"100%"}*/}
+          {/*    />*/}
+          {/*  </Box>*/}
+          {/*  <BeerMenu />*/}
+          {/*</Box>*/}
         </Box>
       </Center>
     </PageLayout>
