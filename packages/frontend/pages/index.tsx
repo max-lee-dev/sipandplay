@@ -6,7 +6,9 @@ const Home: NextPage = () => {
   return (
     <PageLayout title={"geese, by minihacks"}>
       <HStack width={"100%"}>
-        <Heading width={"100%"}>geese</Heading>
+        <Box bg={"neutral.100"}>
+          <Heading width={"100%"}>Welcome</Heading>
+        </Box>
         <Box>hi</Box>
       </HStack>
     </PageLayout>
