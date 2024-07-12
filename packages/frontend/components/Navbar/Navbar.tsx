@@ -25,14 +25,15 @@ const Navbar = (): JSX.Element => {
       <PageLayout>
         <HStack
           p={2}
-          spacing={[10, "260px"]}
+          spacing={[10, "200px"]}
           justifyContent={["space-between", "inherit"]}
         >
-          <HStack pl={4} spacing={4} as={"a"} href={"/"}>
+          <HStack pl={8} spacing={4} as={"a"} href={"/"}>
             <img src={"/sipnplaycropped.png"} width={"60px"} alt={"logo"} />
           </HStack>
 
           <HStack
+            pl={40}
             width={"50%"}
             display={["none", "flex"]}
             spacing={2}
