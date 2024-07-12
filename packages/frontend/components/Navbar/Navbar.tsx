@@ -16,34 +16,51 @@ const Navbar = (): JSX.Element => {
       <PageLayout>
         <HStack
           p={2}
-          spacing={[10, "200px"]}
+          spacing={[10, "260px"]}
           justifyContent={["space-between", "inherit"]}
         >
-          <HStack spacing={4} as={"a"} href={"/"}>
+          <HStack pl={4} spacing={4} as={"a"} href={"/"}>
             <img src={"/sipnplaycropped.png"} width={"60px"} alt={"logo"} />
-            <Heading fontSize={["xl", "3xl"]}>Sip & Play</Heading>
           </HStack>
 
           <HStack
             width={"50%"}
             display={["none", "flex"]}
-            spacing={10}
+            spacing={2}
             justifyContent={"space-evenly"}
           >
             <Box
-              fontSize={"xl"}
+              fontSize={"md"}
               fontWeight={500}
               as={"a"}
               href={"https://www.sipnplaynyc.com/about"}
             >
-              About
+              <Heading fontSize={"md"}>About</Heading>
             </Box>
 
-            <Box fontSize={"xl"} fontWeight={500} as={"a"} href={"/events"}>
-              Events
+            <Box fontSize={"md"} fontWeight={500} as={"a"} href={"/events"}>
+              <Heading fontSize={"md"}>Events</Heading>
             </Box>
-            <Box fontSize={"xl"} fontWeight={500} as={"a"} href={"/menu"}>
-              Menu
+            <Box
+              fontSize={"md"}
+              fontWeight={500}
+              as={"a"}
+              href={
+                "https://docs.google.com/spreadsheets/d/1-TOvwUh-ziCB6QmLYvQlxtXuBd-aGiiO72GWAasby8o/edit?usp=sharing"
+              }
+            >
+              <Heading fontSize={"md"}>Our Games</Heading>
+            </Box>
+            <Box fontSize={"md"} fontWeight={500} as={"a"} href={"/menu"}>
+              <Heading fontSize={"md"}>Menu</Heading>
+            </Box>
+            <Box
+              fontSize={"md"}
+              fontWeight={500}
+              as={"a"}
+              href={"https://www.sipnplaynyc.com/reservations"}
+            >
+              <Heading fontSize={"md"}>Reservations</Heading>
             </Box>
           </HStack>
           <Box

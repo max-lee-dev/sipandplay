@@ -12,6 +12,24 @@
     background-image: radial-gradient(circle farthest-corner at 50% 50%, hsl(187 20% 88%) 30%, hsl(149 20% 94%) 100%);
 }
 
+@media only screen and (min-width: 1224px)
+
+.each-slide {
+    background: red;
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px) {
+    /* Styles */
+    .each-slide {
+        height: 350px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+    }
+}
+
 @media only screen
 and (min-width: 1224px) {
     .book {

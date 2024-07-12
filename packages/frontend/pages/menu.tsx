@@ -207,10 +207,10 @@ const SpecialtyMenu = (): JSX.Element => {
         alignSelf={"flex-start"}
         alignContent={"flex-start"}
         alignItems={"flex-start"}
-        pl={"60px"}
+        pl={"0px"}
         color={"transparent"}
-        width={["100%", "0px"]}
-        minWidth={"350px"}
+        width={["100%", "15px"]}
+        maxWidth={"150px"}
       >
         .
       </Box>

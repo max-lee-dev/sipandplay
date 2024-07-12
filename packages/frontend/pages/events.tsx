@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import type { NextPage } from "next";
-import { Divider, Heading, Stack } from "@chakra-ui/react";
+import { Box, Divider, Heading, Stack } from "@chakra-ui/react";
 import PageLayout from "../components/Layout/PageLayout";
 import Calendar from "../components/Calendar/Calendar";
 import Log from "../components/Log/Log";
@@ -10,11 +10,13 @@ const Events: NextPage = () => {
 
   return (
     <PageLayout title={"geese, by minihacks"}>
-      <Heading pt={5} fontSize={["xl", "3xl"]}>
-        Events
-      </Heading>
+      <Box pl={4}>
+        <Heading pt={5} fontSize={["xl", "3xl"]}>
+          Events
+        </Heading>
 
-      <Divider borderWidth={3} borderColor={"brand.500"} width={"5%"} />
+        <Divider borderWidth={3} borderColor={"brand.500"} width={"5%"} />
+      </Box>
 
       <Stack
         pt={6}
