@@ -48,7 +48,7 @@ const Home: NextPage = () => {
   return (
     <PageLayout>
       <Head>
-        <title>Sip & Play NYC</title>
+        <title>Home - Sip & Play NYC</title>
         <meta
           name={"description"}
           content={

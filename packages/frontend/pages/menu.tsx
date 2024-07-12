@@ -16,6 +16,7 @@ import PageLayout from "../components/Layout/PageLayout";
 import ActualCoffeeModel from "../components/ActualCoffeeModel";
 import BobaModel from "../components/BobaModel";
 import CoffeeModel from "../components/CoffeeModel";
+import Head from "next/head";
 
 const CoffeeMenu = (): JSX.Element => {
   return (
@@ -101,6 +102,7 @@ const CoffeeMenu = (): JSX.Element => {
           </HStack>
         </VStack>
       </Box>
+
       <Box
         id={"realCoffee"}
         alignSelf={"flex-start"}
@@ -202,19 +204,20 @@ const SpecialtyMenu = (): JSX.Element => {
           </HStack>
         </VStack>
       </Box>
+      <CoffeeModel />
+
       <Box
         id={"coffee"}
         alignSelf={"flex-start"}
         alignContent={"flex-start"}
         alignItems={"flex-start"}
-        pl={"0px"}
+        pl={"20px"}
         color={"transparent"}
-        width={["100%", "15px"]}
-        maxWidth={"150px"}
+        width={["100%", "250px"]}
+        maxWidth={"250px"}
       >
         .
       </Box>
-      <CoffeeModel />
     </Box>
   );
 };
@@ -311,10 +314,10 @@ const BobaMenu = (): JSX.Element => {
         alignSelf={"flex-start"}
         alignContent={"flex-start"}
         alignItems={"flex-start"}
-        pl={"80px"}
+        pl={"-20px"}
         color={"transparent"}
-        width={["100%", "0px"]}
-        minWidth={"200px"}
+        width={["100%", "250px"]}
+        minWidth={"250px"}
       >
         .
       </Box>
@@ -542,6 +545,29 @@ const Menu: NextPage = () => {
   return (
     <PageLayout>
       <NoSsr />
+      <Head>
+        <title>Menu - Sip & Play NYC</title>
+        <meta
+          name={"description"}
+          content={
+            "Check out the menu at Sip & Play in Brooklyn, NY. Enjoy board games, bubble tea, coffee, beer, and delicious sandwiches or salads. Perfect for parties of all sizes, with special accommodations for groups of 9 or more. Visit us at 471 5th Ave., Brooklyn, and experience fun-filled moments with friends and family. Open Monday to Thursday from 11am to 11pm, Friday from 11am to midnight, Saturday from 10am to midnight, and Sunday from 10am to 11pm."
+          }
+        />
+        <meta
+          name={"viewport"}
+          content={"initial-scale=1.0, width=device-width"}
+        />
+        <meta name={"theme-color"} content={"#000000"} />
+        <meta name={"og:title"} content={"Sip & Play NYC"} />
+        <meta name={"og:image"} content={"/2021-12-12.jpg"} />
+        <meta
+          name={"keywords"}
+          content={
+            "menu, food, boba, drinks, beer, events, games, hosting, sip, play, nyc, boardgames, bubble tea, coffee, beer, sandwiches, salads"
+          }
+        />
+        <link rel={"icon"} href={"/favicon.ico"} />
+      </Head>
 
       <SimpleGrid
         display={["inline-block", "none"]}

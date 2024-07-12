@@ -5,7 +5,6 @@ import DayCell from "./DayCell";
 const Weekday = ({ day }: { day: string }): JSX.Element => {
   return (
     <Box>
-      {" "}
       <Box textAlign={"center"} p={2}>
         {day}
       </Box>
@@ -21,6 +20,7 @@ const Calendar = ({
   selectedDay: number | null;
   setSelectedDay: (idx: number) => void;
 }): JSX.Element => {
+  // Calendar is only July 2024 for demonstration purposes
   return (
     <Box
       alignItems={["center", "flex-start"]}
