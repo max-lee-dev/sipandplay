@@ -15,6 +15,7 @@ import NoSsr from "../components/no-ssr";
 import PageLayout from "../components/Layout/PageLayout";
 import ActualCoffeeModel from "../components/ActualCoffeeModel";
 import BobaModel from "../components/BobaModel";
+import CoffeeModel from "../components/CoffeeModel";
 
 const CoffeeMenu = (): JSX.Element => {
   return (
@@ -201,6 +202,19 @@ const SpecialtyMenu = (): JSX.Element => {
           </HStack>
         </VStack>
       </Box>
+      <Box
+        id={"coffee"}
+        alignSelf={"flex-start"}
+        alignContent={"flex-start"}
+        alignItems={"flex-start"}
+        pl={"60px"}
+        color={"transparent"}
+        width={["100%", "0px"]}
+        minWidth={"350px"}
+      >
+        .
+      </Box>
+      <CoffeeModel />
     </Box>
   );
 };
@@ -532,7 +546,8 @@ const Menu: NextPage = () => {
       <SimpleGrid
         display={["inline-block", "none"]}
         columns={[1]}
-        spacing={10}
+        spacing={20}
+        spacingY={"32px"}
         pt={5}
       >
         <Box
@@ -619,9 +634,9 @@ const Menu: NextPage = () => {
             alignSelf={"flex-start"}
             alignContent={"flex-start"}
             alignItems={"flex-start"}
-            pl={"80px"}
+            pl={"40px"}
             color={"transparent"}
-            width={["50%", "0px"]}
+            width={["30%", "0px"]}
             minWidth={"200px"}
           >
             .
@@ -949,6 +964,129 @@ const Menu: NextPage = () => {
               </Text>
             </HStack>
           </VStack>
+        </Box>
+        <Box
+          bg={"neutral.100"}
+          height={"100%"}
+          borderRadius={"lg"}
+          p={8}
+          color={"brand.900"}
+        >
+          <Box>
+            <HStack>
+              <Heading fontWeight={700} fontSize={["xl", "2xl"]}>
+                Seasonal Menu
+              </Heading>
+            </HStack>
+            <Divider borderColor={"brand.700"} borderWidth={1} />
+            <VStack width={"100%"} alignItems={"flex-start"} pt={6}>
+              <HStack width={"100%"} justifyContent={"space-between"}>
+                <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                  Pina Colada
+                </Heading>
+                <Text fontSize={["xl", "2xl"]} fontWeight={400}>
+                  $4.75(H)/$5.75(C)
+                </Text>
+              </HStack>
+              <HStack width={"100%"} justifyContent={"space-between"}>
+                <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                  Matcha Lemondae
+                </Heading>
+                <Text fontSize={["xl", "2xl"]} fontWeight={400}>
+                  $5.75(H)/$6.25(C)
+                </Text>
+              </HStack>
+              <HStack width={"100%"} justifyContent={"space-between"}>
+                <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                  Yuzu-Ade
+                </Heading>
+                <Text fontSize={["xl", "2xl"]} fontWeight={400}>
+                  $5.25
+                </Text>
+              </HStack>
+              <HStack width={"100%"} justifyContent={"space-between"}>
+                <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                  Fresh Squeezed Lemonade
+                </Heading>
+                <Text fontSize={["xl", "2xl"]} fontWeight={400}>
+                  $4.00
+                </Text>
+              </HStack>
+              <HStack width={"100%"} justifyContent={"space-between"}>
+                <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                  Matcha Lavender Oat
+                </Heading>
+                <Text fontSize={["xl", "2xl"]} fontWeight={400}>
+                  $6.50
+                </Text>
+              </HStack>
+              <HStack width={"100%"} justifyContent={"space-between"}>
+                <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                  Barry Lavendar Lemondae
+                </Heading>
+                <Text fontSize={["xl", "2xl"]} fontWeight={400}>
+                  $5.25
+                </Text>
+              </HStack>
+            </VStack>
+          </Box>
+        </Box>
+        <Box
+          height={"100%"}
+          borderRadius={"lg"}
+          p={8}
+          bg={"neutral.100"}
+          color={"brand.900"}
+        >
+          <Box>
+            <HStack>
+              <Heading fontWeight={700} fontSize={["xl", "2xl"]}>
+                Beer
+              </Heading>
+            </HStack>
+            <Divider borderColor={"brand.700"} borderWidth={1} />
+            <VStack width={"100%"} alignItems={"flex-start"} pt={6}>
+              <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                Babe Rose
+              </Heading>
+              <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                Archer Roose White/Red
+              </Heading>
+              <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                Kona Lager
+              </Heading>
+              <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                Blue Point
+              </Heading>
+              <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                Juneshine
+              </Heading>
+              <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                Lunar Hard Seltzers
+              </Heading>
+              <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                Allagash White
+              </Heading>
+              <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                Doc Cider
+              </Heading>
+              <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                Doc Cider
+              </Heading>
+              <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                Stella Artois
+              </Heading>
+              <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                Shocktop
+              </Heading>
+              <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                Finback
+              </Heading>
+              <Heading fontSize={["xl", "2xl"]} fontWeight={600}>
+                Three&apos;s Brewery
+              </Heading>
+            </VStack>
+          </Box>
         </Box>
       </SimpleGrid>
 
